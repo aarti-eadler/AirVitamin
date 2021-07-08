@@ -828,6 +828,8 @@ p {
     margin-top: 50px;
   }
 }
+
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .header_image {
     width: 540px;
@@ -926,6 +928,7 @@ p {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about_area {
+    overflow: hidden;
     margin-top: 100px;
   }
 }
@@ -944,15 +947,22 @@ p {
   height: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about_area{
+    overflow: hidden;
+  }
   .about_image {
     position: relative;
     width: 720px;
+    /* overflow-x: hidden; */
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 @media (max-width: 767px) {
+  .about_area{
+    overflow: hidden;
+  }
   .about_image {
     position: relative;
     width: 100%;
@@ -1350,11 +1360,12 @@ p.form-message.error.form-message.error {
   width: 45px;
   height: 45px;
   line-height: 43px;
+  /* background: rgb(244, 243, 253); */
   text-align: center;
-  border: 1px solid #747e88;
+  border: 1px solid #2A3493;
   border-radius: 50%;
   font-size: 18px;
-  color: #747e88;
+  color: #2A3493;
 }
 .single_info .info_content {
   padding-left: 20px;
@@ -1380,6 +1391,8 @@ p.form-message.error.form-message.error {
   border-radius: 25px;
 }
 .footer_area {
+  margin-top: 2%;
+  background: #fafafa;
   position: relative;
 }
 .footer_area::before {
@@ -1780,18 +1793,15 @@ p.form-message.error.form-message.error {
   border-color: #007bb5;
 }
 
-.rounded-social-buttons .social-button.youtube {
-  background: #bb0000;
-}
-
-.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
-  color: #bb0000;
-  background: #fefefe;
-  border-color: #bb0000;
-}
 
 .rounded-social-buttons .social-button.instagram {
-  background: #125688;
+  /* background: #125688; */
+
+  background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); */
 }
 
 .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
@@ -2352,7 +2362,7 @@ p.form-message.error.form-message.error {
 
 /* Waves */
 .ocean {
-  height: 120px; /* change the height of the waves here */
+  height: 80px; /* change the height of the waves here */
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -2392,3 +2402,100 @@ p.form-message.error.form-message.error {
 }
 
 /* Waves */
+/* 
+.center{
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+} */
+
+
+
+/* .check {
+  transfrom: scale(1);
+  stroke-width: 2px;
+  stroke-dasharray: 50px, 50px;
+  stroke-dashoffset: 0px;
+  width: 10px;
+  animation: checkmark 4s ease-in-out 0.9s backwards infinite;
+
+}
+
+
+@-webkit-keyframes checkmark {
+    0% {
+        stroke-dashoffset: 50px
+    }
+
+    100% {
+        stroke-dashoffset: 0px
+    }
+} */
+@-webkit-keyframes checked {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes checked {
+  0% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.faa-checked.animated,
+.faa.faa-checked.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-pulse {
+  -webkit-animation: checked 2s linear infinite;
+  animation: checked 2s linear infinite;
+}
+
+.benefits_title h5{
+ font-size: 25px;
+ color: #2A3493;
+}
+
+.benefits_title p{
+  font-size: 20px;
+}
+
+
+.main_title{
+  text-align: center;
+  margin: 2%;
+}
+
+.main_title span{
+  color: #2A3493;
+}
+
+.mg{
+  margin-bottom: 10%;
+}
+
+
